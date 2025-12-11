@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firm Profile - Madhav Finserve</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #0f285d; /* Deep Blue */
+        --secondary: #c9a448; /* Gold */
+        --accent: #007a5e; /* Peacock Green */
+        --bg-light: #f4f7f6;
+        --bg-outer: #cfd8dc; /* Blue-Grey Professional Background */
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: var(--bg-outer);
+        margin: 0;
+        padding: 40px 20px;
+      }
+
+      /* Main Container */
+      .document {
+        background-color: #fff;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 50px;
+        border-radius: 12px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        border-top: 6px solid var(--secondary);
+      }
+
+      /* Typography */
+      h1, h2, h3, h4 {
+        font-family: "Montserrat", sans-serif;
+        color: var(--primary);
+        margin-top: 0;
+      }
+
+      h2 {
+        font-size: 1.6em;
+        position: relative;
+        padding-bottom: 10px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        display: inline-block;
+      }
+      
+      h2::after {
+        content: '';
+        position: absolute;
+        width: 60%;
+        height: 3px;
+        background: var(--secondary);
+        bottom: 0;
+        left: 0;
+      }
+
+      /* Logo Area */
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .logo-img {
+        max-width: 320px;
+        height: auto;
+        display: block;
+        margin: 0 auto 15px auto;
+      }
+      
+      /* Updated Tagline Style */
+      .tagline {
+        color: #555;
+        font-weight: 600;
+        font-size: 1.1em;
+        max-width: 80%;
+        margin: 0 auto;
+        line-height: 1.4;
+      }
+
+      /* Intro */
+      .intro-box {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 0 20px;
+        font-style: italic;
+        color: #666;
+      }
+
+      /* Founders Grid */
+      .founders-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+
+      .founder-card {
+        background: var(--bg-light);
+        padding: 25px;
+        border-radius: 8px;
+        text-align: center;
+        border-bottom: 4px solid var(--primary);
+        transition: transform 0.3s ease;
+      }
+
+      .founder-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+
+      .founder-icon {
+        background: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px auto;
+        color: var(--secondary);
+        font-size: 1.5em;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      .founder-name {
+        font-size: 1.3em;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 5px;
+      }
+
+      .founder-role {
+        color: var(--accent);
+        font-weight: 600;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 0.9em;
+        letter-spacing: 0.5px;
+      }
+
+      .arn-badge {
+        display: inline-block;
+        background-color: var(--primary);
+        color: white;
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: 600;
+      }
+
+      /* Services Grid */
+      .services-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+
+      .service-card {
+        background: #fff;
+        border: 1px solid #eee;
+        padding: 25px;
+        border-radius: 8px;
+        border-left: 4px solid var(--secondary);
+      }
+
+      .service-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .service-header i {
+        font-size: 1.5em;
+        color: var(--primary);
+        margin-right: 15px;
+      }
+
+      .service-header h3 {
+        margin: 0;
+        font-size: 1.1em;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+        position: relative;
+        font-size: 0.95em;
+      }
+      li::before {
+        content: "\f00c";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        color: var(--accent);
+        position: absolute;
+        left: 0;
+        top: 4px;
+        font-size: 0.8em;
+      }
+
+      /* Contact Section */
+      .contact-box {
+        background-color: var(--primary);
+        color: white;
+        padding: 30px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        text-align: center;
+      }
+      .contact-item {
+        flex: 1;
+        min-width: 200px;
+        margin: 10px;
+      }
+      .contact-item i {
+        font-size: 1.8em;
+        color: var(--secondary);
+        margin-bottom: 10px;
+        display: block;
+      }
+      .contact-item a, .contact-item p {
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin: 5px 0;
+      }
+      .contact-item a:hover {
+        text-decoration: underline;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        font-size: 0.9em;
+        color: #777;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 700px) {
+        .founders-grid, .services-grid {
+            grid-template-columns: 1fr;
+        }
+        .document {
+            padding: 20px;
+        }
+        body {
+            padding: 10px;
+        }
+      }
+
+      /* Print Styles */
+      @media print {
+        body { background: white; padding: 0; }
+        .document { box-shadow: none; border: none; max-width: 100%; padding: 0; }
+        .founder-card, .contact-box { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        .contact-box { background-color: #eee !important; color: black !important; }
+        .contact-item a { color: black !important; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="document">
+      <header>
+        <img
+          src="logo.png"
+          alt="Madhav Finserve Logo"
+          class="logo-img"
+          onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<h1 style=\'font-size:2.5em; margin-bottom:10px;\'>Madhav Finserve</h1>')"
+        />
+        <div class="tagline">
+            Building long-term wealth using the analytical discipline of a CA Final Student
+        </div>
+      </header>
+
+      <section class="intro-box">
+        <p>
+          We bridge the critical gap between mandatory regulatory compliance and voluntary wealth creation.
+        </p>
+      </section>
+
+      <h2 style="text-align: center; display: block; border: none; margin-bottom: 20px;">
+        <i class="fas fa-users"></i> Our Leadership
+      </h2>
+
+      <div class="founders-grid">
+        <div class="founder-card">
+            <div class="founder-icon">
+                <i class="fas fa-file-invoice"></i>
+            </div>
+            <div class="founder-name">Varshit Shingala</div>
+            <div class="founder-role">Taxation & Audit Head</div>
+            <div style="font-weight: bold; color: #555;">CA Finalist</div>
+        </div>
+
+        <div class="founder-card">
+            <div class="founder-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="founder-name">Nidhi Shingala</div>
+            <div class="founder-role">Mutual Fund Distributor</div>
+            <div class="arn-badge">ARN-347597</div>
+        </div>
+      </div>
+
+      <h2>Our Core Services</h2>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-header">
+            <i class="fas fa-gavel"></i>
+            <h3>Taxation & Compliance</h3>
+          </div>
+          <ul>
+            <li>Income Tax Return (ITR) Filing</li>
+            <li>GST Registration & Filing</li>
+            <li>TDS Compliance Advisory</li>
+            <li>Tax Audit Assistance</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header">
+            <i class="fas fa-seedling"></i>
+            <h3>Wealth Management</h3>
+          </div>
+          <ul>
+            <li>Strategic Mutual Fund Distribution</li>
+            <li>Systematic Investment Plans (SIP)</li>
+            <li>Portfolio Guidance & Review</li>
+            <li>Financial Goal Planning</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header">
+            <i class="fas fa-calculator"></i>
+            <h3>Accounting Services</h3>
+          </div>
+          <ul>
+            <li>Professional Bookkeeping</li>
+            <li>Financial Statement Preparation</li>
+            <li>End-to-end Business Accounting</li>
+            <li>Inventory Management</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Insurance Solutions</h3>
+          </div>
+          <ul>
+            <li>Life Insurance Policies</li>
+            <li>General Insurance (Asset Protection)</li>
+            <li>Health & Term Plans</li>
+            <li>Risk Coverage Planning</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact-box">
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <p>Call / WhatsApp</p>
+          <a href="https://wa.me/919106545916">+91 9106545916</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <p>Email Us</p>
+          <a href="mailto:madhavfinserve.official@gmail.com">madhavfinserve.official@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Location</p>
+          <p>Ahmedabad, Gujarat</p>
+        </div>
+      </div>
+
+      <footer>
+        <p>
+          © 2025 Madhav Finserve. All Rights Reserved.
+        </p>
+      </footer>
+    </div>
+
+  </body>
+</html>
